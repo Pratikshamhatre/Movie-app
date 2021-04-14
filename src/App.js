@@ -1,14 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
-import {Router} from 'react-router';
+import {BrowserRouter as Router,Link,Route} from 'react-router-dom';
 import Home from './Home';
+import About from './About';
+import Movie from './Movie';
 
 
 function App() {
   return (
-    <div className="App">
-<Home />
-    </div>
+ 
+<div className="container">
+
+
+      <Router>
+
+        <Route exact path="/" component={Home} />
+        <Route exact path="/movie/:movieId" component={Movie} />
+
+
+      </Router>
+</div>
+
   );
 }
 
