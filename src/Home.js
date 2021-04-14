@@ -36,9 +36,15 @@ export default class Home extends Component {
             </div>)
         })
 
+        if(this.state.movieList.length===0){
+            return <div className="movie">
+                    <h1>Loading...</h1>
+            </div>
+        }
         return (
             <>
                 <h2 className="center">Movies</h2>
+                
                 <div className="row center">
 
                     {movieGrid}
